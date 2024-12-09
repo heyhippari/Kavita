@@ -1,3 +1,5 @@
+@import '../../../theme/_variables.scss';
+
 .tagbadge {
     background-color: var(--tagbadge-bg-color);
     transition: all .3s ease-out;
@@ -10,23 +12,20 @@
     word-break: break-word;
 
     i {
+        max-height: 48px;
+        height: 48px;
+        width: 48px;
         font-size: 2.96rem;
         font-weight: bold;
         cursor: pointer;
     }
 
-    image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+    .image-container {
+        background: var(--card-bg-color);
+        max-height: 96px;
+        height: 96px;
+        width: 96px;
         border-radius: 50%;
         overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 }
