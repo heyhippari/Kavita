@@ -23,11 +23,6 @@
   padding: 2px 5px;
   font-size: 0.8rem;
   vertical-align: middle;
-
-  div {
-    min-height: 32px;
-    line-height: 32px;
-  }
 }
 
 .publisher-flipper {
@@ -44,14 +39,25 @@
 }
 
 .publisher-side {
-  position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+
+  // Position: absolute on the second child
+  &:not(:first-child) {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .publisher-img-container {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .publisher-front {
   z-index: 2;
+  transform: rotateX(0deg);
 }
 
 .publisher-back {
